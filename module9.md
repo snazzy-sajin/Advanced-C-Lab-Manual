@@ -13,11 +13,18 @@ Algorithm:
  
 Program:
 
-//type your code here
+int stack[40],top,i; void display()
+{
+for(i=top;i>=0;i--)
+{
+printf("%d\n",stack[i]);
+}
+}
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/6bcb7d85-e740-497a-916d-c448f39f3c50)
+
 
 
 
@@ -35,12 +42,22 @@ Algorithm:
 4.	Call the push function as needed.
  
 Program:
-
-//type your code here
+int size=3,top=1; float stack[40];
+void push (float data)
+{
+if (top==size-1 )
+{
+printf("stack is full\n");
+}
+else
+{
+top ++; stack[top] = data;
+}
+}
 
 Output:
+![image](https://github.com/user-attachments/assets/dbd62d6f-c813-43b9-9f30-6c750b442de2)
 
-//paste your output here
 
 
 
@@ -61,12 +78,24 @@ Algorithm:
 4.	Call the display function and perform other queue operations as needed.
  
 Program:
-
-//type your code here
+int queue[50], rear, front,i; void display()
+{
+if(front==-1)
+{
+printf("No elements to display");
+}
+else
+{
+for(i=front;i<=rear;i++)
+{
+printf("%d ",queue[i]);
+}
+}
+}
 
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/5e8d9fe5-210f-483a-a0ff-a83891922346)
 
 
 Result:
@@ -85,12 +114,21 @@ Algorithm:
 4.	Call the enqueue function as needed.
 
 Program:
-
-//type your code here
-
+int size=4, rear=-1, front=-1; float queue[50];
+void enqueue(float data)
+{
+if(rear<size)
+{
+if(front==-1)
+{
+front=0;
+}
+rear=rear+1; queue[rear]=data;
+}
+}
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/cf7a68ab-9c68-46af-bbd6-d43d0a14301b)
 
 Result:
 Thus, the program to insert elements in queue using array is verified successfully.
@@ -121,11 +159,20 @@ o	After deletion, check if the front pointer has passed the rear pointer (front 
 
 Program:
 
-//type your code here
-
+int front, rear;
+void dequeue()
+{
+    if(front==-1&&rear==-1)
+    printf("Queue Underflow.");
+    else if(front==rear)
+    front=rear=-1;
+    else{
+        front=front+1;
+    }
+}
 Output:
 
-//paste your output here
+![image](https://github.com/user-attachments/assets/77f30d41-a0c5-4af4-b1c6-51f1f1943621)
 
 
 Result:
